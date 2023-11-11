@@ -33,6 +33,7 @@ Checking Ansible: `ansible --version`
 Renaming Ansible server name in CMD(Not mandatory step): `hostnamectl set-hostname Ansible_Server` -> This will replace ip address with Ansible_Server
 Check SSH Keygen generation: 
 - check if the `id_rsa.pub` is present in server or not: 
+
   ![image](https://github.com/balajisomasale/Multiple-Ansible-Projects/assets/35003840/93cc2e91-996b-4cde-b05e-9caa688fa834)
   
 - If not present like this case, we can use: `ssh-keygen` inside `/root/.ssh` directory.

@@ -57,4 +57,32 @@ Check connectivity between 2 servers(from 1st server): `ssh 18.234.82.145` -> pu
 
 Creating Ansible Playbooks:
 
+- Download the playbooks from this Github repo: `git clone https://github.com/balajisomasale/Multiple-Ansible-Projects.git`
+- Go to current project and change the inventory file with public IP address of Target Node Server: 
 
+  ![image](https://github.com/balajisomasale/Multiple-Ansible-Projects/assets/35003840/2168ac3b-f7c7-456a-b16d-2d5df3ecc9c9)
+
+- Run the ansible playbook using command: `ansible-playbook -i inventory playbook.yml`
+
+- Navigate to target server to check the changes: 
+  - To check the grafana status: `systemctl status grafana-server`
+    ![image](https://github.com/balajisomasale/Multiple-Ansible-Projects/assets/35003840/93d41f08-6f43-4497-9d6b-1eec4512fbd7)
+  - To check the Prometheus status: `systemctl status prometheus`
+    ![image](https://github.com/balajisomasale/Multiple-Ansible-Projects/assets/35003840/5afd4100-f89f-4ecc-941b-81fa9d1313a1)
+  - To check the Alert Manager status: `systemctl status alertmanager`
+    ![image](https://github.com/balajisomasale/Multiple-Ansible-Projects/assets/35003840/0fdbbbc0-13e2-4e0e-bff1-718b6c1882b5)
+  - To check the Node Exporter status: `systemctl status node_exporter.service`
+    ![image](https://github.com/balajisomasale/Multiple-Ansible-Projects/assets/35003840/2ff1bb0f-af57-406f-b3b0-35810f145866)
+
+Validation of the servers in the browser:
+- Checking Grafana in browser with `3000` as port with userid and pwd as `admin`:
+  ![image](https://github.com/balajisomasale/Multiple-Ansible-Projects/assets/35003840/0dee5e92-18db-4f55-b32f-6025d2e6b726)
+- Checking prometheus port `9090`:
+  ![image](https://github.com/balajisomasale/Multiple-Ansible-Projects/assets/35003840/da1152ba-afd8-4286-a4aa-cd063b513d2f)
+- Checking Node exporter port `9100 `:
+  ![image](https://github.com/balajisomasale/Multiple-Ansible-Projects/assets/35003840/c1094086-e54a-4891-9143-1025d44aa739)
+- Checking Alert Manager port `9093`:
+  ![image](https://github.com/balajisomasale/Multiple-Ansible-Projects/assets/35003840/b5ee9730-9cf4-4699-9360-1093943d3588)
+
+By this, we can monitor the logs real time with the usage of Ansible playbooks
+---------------- EOF----

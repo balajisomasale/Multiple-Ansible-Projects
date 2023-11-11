@@ -63,7 +63,8 @@ Creating Ansible Playbooks:
   ![image](https://github.com/balajisomasale/Multiple-Ansible-Projects/assets/35003840/2168ac3b-f7c7-456a-b16d-2d5df3ecc9c9)
 
 - Run the ansible playbook using command: `ansible-playbook -i inventory playbook.yml`
-
+  Note: we changed the hostname of Target node server to `Node1`
+  
 - Navigate to target server to check the changes: 
   - To check the grafana status: `systemctl status grafana-server`
     ![image](https://github.com/balajisomasale/Multiple-Ansible-Projects/assets/35003840/93d41f08-6f43-4497-9d6b-1eec4512fbd7)
